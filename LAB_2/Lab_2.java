@@ -18,6 +18,13 @@ public class Lab_2 {
         this.id = id;
 
     }
+    Lab_2(Lab_2 obj) {  // Copy constructor
+        this.name = obj.name;
+        this.cgpa = obj.cgpa;
+        this.id = obj.id;
+
+    }
+
 
     public void display() {
                 
@@ -33,11 +40,14 @@ public class Lab_2 {
     // }
 
     public static void main(String[] args) {
-        Lab_2 obj = new Lab_2();
-        obj.display();
+        Lab_2 obj1 = new Lab_2();
+        obj1.display();
 
         Lab_2 obj2 = new Lab_2(2207, 3.8f, "Jane Smith");
         obj2.display();
+
+        Lab_2 obj3 = new Lab_2(obj2);
+        obj3.display();
     }
 
 
